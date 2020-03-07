@@ -1,0 +1,50 @@
+{
+	// define square area for recognition
+	// (Easier to control the background like this)
+	"top_left": [20, 10],
+	"bot_right": [220, 210],
+
+	// create the key mappings, key on keyboard equals icon
+	// mappings will be used to organize training
+	// data on disk
+	"mappings": {
+		"i": "ignore",
+		"f": "fist",
+		"h": "hang_loose",
+		"p": "peace",
+		"s": "stop"
+	},
+
+	// path to captured training data
+	"dataset_path": "./data",
+
+	// initial learning rate, batch size, number of
+	// epochs to train for
+	"init_lr": 1e-3,
+	"bs": 8,
+	"num_epochs": 75,
+
+	// path to the trained model
+	// path to label binarizer
+	"model_path": "output/gesture_reco.h5",
+	"lb_path": "output/lb.pickle",
+
+	// path to the assets folder
+	"assets_path": "assets",
+
+	// define the correct password
+	"passcode": ["peace", "stop", "fist", "hang_loose"],
+
+	// number of consecutive frames a gesture needs to be successfully
+	// classified until updating the gestures list
+	"consec_frames": 30,
+
+	// number of seconds to show the status message after a correct or
+	// incorrect pas code entry
+	"num_seconds": 10,
+
+	// path to the audio files that will play for correct and incorrect
+	// pass codes
+	"correct_audio": "assets/correct.wav",
+	"incorrect_audio": "assets/incorrect.wav"
+}
